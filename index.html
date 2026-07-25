@@ -185,6 +185,7 @@ footer{border-top:1px solid var(--border);padding:14px 32px;text-align:center;ba
   <div class="tab" onclick="showTab('riscos',this)">⚠️ Riscos de Custo</div>
   <div class="tab" onclick="showTab('resultados',this)">📈 Resultados</div>
   <div class="tab" onclick="showTab('prefeituras',this)">🏛️ Prefeituras</div>
+  <div class="tab" onclick="showTab('primegov',this)">🏦 PrimeGov</div>
 </div>
 
 <!-- ── DASHBOARD ── -->
@@ -353,6 +354,33 @@ footer{border-top:1px solid var(--border);padding:14px 32px;text-align:center;ba
         <table class="risk-table" id="prefTable" style="min-width:700px">
           <thead id="prefHead"></thead>
           <tbody id="prefBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+
+<!-- ── PRIMEGOV ── -->
+<div id="pane-primegov" class="tab-pane">
+<div class="container">
+  <section>
+    <div class="section-title" id="primegov-title">PrimeGov</div>
+
+    <div class="kpi-grid" id="primegov-kpis" style="margin-bottom:1.5rem">
+      <div class="kpi-card" style="--kc:#1a3a8f">
+        <div class="kpi-label">💰 Total PrimeGov</div>
+        <div class="kpi-value" id="primegov-total">—</div>
+        <div class="kpi-sub" id="primegov-sub">—</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title" id="primegov-card-title">—</div>
+      <div style="overflow-x:auto">
+        <table class="risk-table" id="primegovTable" style="min-width:500px">
+          <thead id="primegovHead"></thead>
+          <tbody id="primegovBody"></tbody>
         </table>
       </div>
     </div>
@@ -586,7 +614,7 @@ const MONTHS = {
   },
   "2026-07": {
     label:"Julho 2026", unidades:22, diasMes:31,
-    status:"Atualizado até 22/07/26",
+    status:"Atualizado até 23/07/26",
     daily:[
       {d:"01/07",dow:"Qua",lit:141128,lucro:137918},
       {d:"02/07",dow:"Qui",lit:137140,lucro:134459},
@@ -609,87 +637,107 @@ const MONTHS = {
       {d:"19/07",dow:"Dom",lit:90486,lucro:93607},
       {d:"20/07",dow:"Seg",lit:152311,lucro:185660},
       {d:"21/07",dow:"Ter",lit:128117,lucro:150731},
-      {d:"22/07",dow:"Qua",lit:148483,lucro:169270}
+      {d:"22/07",dow:"Qua",lit:148483,lucro:169270},
+      {d:"23/07",dow:"Qui",lit:142138,lucro:161081}
     ],
     units:[
-      {uf:"PB",name:"DOMINGOS MD",lit:414155,lucro:437155},
-      {uf:"RN",name:"DOMINGOS COPACABANA",lit:224097,lucro:253091},
-      {uf:"RN",name:"DOMINGOS JAGUARARI",lit:112983,lucro:225317},
-      {uf:"RN",name:"DOMINGOS BR 406 COMERCIAL",lit:147103,lucro:209139},
-      {uf:"RN",name:"DOMINGOS RIACHUELO",lit:235392,lucro:208213},
-      {uf:"RN",name:"DOMINGOS ROMUALDO GALVAO",lit:95313,lucro:201468},
-      {uf:"RN",name:"DOMINGOS SUBAE",lit:126054,lucro:200103},
-      {uf:"RN",name:"DOMINGOS MM",lit:136158,lucro:188394},
-      {uf:"RN",name:"DOMINGOS SANTO ANTONIO",lit:139189,lucro:178995},
-      {uf:"RN",name:"DOMINGOS REDINHA",lit:123614,lucro:168078},
-      {uf:"CE",name:"DOMINGOS BOQUEIRÃO II",lit:202335,lucro:149043},
-      {uf:"CE",name:"DOMINGOS JAGUARIBARA II",lit:213233,lucro:145520},
-      {uf:"PB",name:"DOMINGOS MAMANGUAPE",lit:164050,lucro:142901},
-      {uf:"RN",name:"DOMINGOS BAIXA DO MEIO",lit:78944,lucro:124872},
-      {uf:"RN",name:"DOMINGOS EXTREMOZ",lit:94757,lucro:122582},
-      {uf:"RN",name:"DOMINGOS ESPIRITO SANTO",lit:65754,lucro:101167},
-      {uf:"RN",name:"DOMINGOS SG",lit:101490,lucro:89000},
-      {uf:"RN",name:"DOMINGOS GENIPABU",lit:73453,lucro:77856},
-      {uf:"RN",name:"DOMINGOS BERNARDO VIEIRA",lit:76297,lucro:60723},
-      {uf:"CE",name:"DOMINGOS BOQUEIRÃO I",lit:76911,lucro:59143},
-      {uf:"CE",name:"DOMINGOS BR 020",lit:106263,lucro:47214},
-      {uf:"PE",name:"DOMINGOS CUSTÓDIA",lit:18671,lucro:12795}
+      {uf:"PB",name:"DOMINGOS MD",lit:437124,lucro:457380},
+      {uf:"RN",name:"DOMINGOS COPACABANA",lit:232799,lucro:263370},
+      {uf:"RN",name:"DOMINGOS JAGUARARI",lit:119257,lucro:237875},
+      {uf:"RN",name:"DOMINGOS BR 406 COMERCIAL",lit:155015,lucro:221440},
+      {uf:"RN",name:"DOMINGOS RIACHUELO",lit:248427,lucro:218904},
+      {uf:"RN",name:"DOMINGOS ROMUALDO GALVAO",lit:100998,lucro:214068},
+      {uf:"RN",name:"DOMINGOS SUBAE",lit:132302,lucro:208372},
+      {uf:"RN",name:"DOMINGOS MM",lit:141903,lucro:195923},
+      {uf:"RN",name:"DOMINGOS SANTO ANTONIO",lit:145960,lucro:188446},
+      {uf:"RN",name:"DOMINGOS REDINHA",lit:128394,lucro:175368},
+      {uf:"CE",name:"DOMINGOS BOQUEIRÃO II",lit:212001,lucro:155053},
+      {uf:"CE",name:"DOMINGOS JAGUARIBARA II",lit:221007,lucro:150416},
+      {uf:"PB",name:"DOMINGOS MAMANGUAPE",lit:169808,lucro:148158},
+      {uf:"RN",name:"DOMINGOS BAIXA DO MEIO",lit:81799,lucro:129480},
+      {uf:"RN",name:"DOMINGOS EXTREMOZ",lit:97855,lucro:127668},
+      {uf:"RN",name:"DOMINGOS ESPIRITO SANTO",lit:68958,lucro:106460},
+      {uf:"RN",name:"DOMINGOS SG",lit:106422,lucro:93800},
+      {uf:"RN",name:"DOMINGOS GENIPABU",lit:76715,lucro:81435},
+      {uf:"RN",name:"DOMINGOS BERNARDO VIEIRA",lit:78999,lucro:63654},
+      {uf:"CE",name:"DOMINGOS BOQUEIRÃO I",lit:78841,lucro:60686},
+      {uf:"CE",name:"DOMINGOS BR 020",lit:114132,lucro:52545},
+      {uf:"PE",name:"DOMINGOS CUSTÓDIA",lit:19640,lucro:13349}
     ],
     alerts:[
-      {ac:"#059669",icon:"🏆",title:"ROMUALDO GALVAO — Segue Disparado: Margem 211,4%",text:"22 dias: 95.313 L · R$201.468 · margem 211,4%. Segue firme como a maior margem percentual da rede."},
-      {ac:"#059669",icon:"🚀",title:"JAGUARARI — Aproximando-se de 200% de Margem",text:"22 dias: 112.983 L · R$225.317 · margem 199,4%, quase alcançando ROMUALDO GALVAO. Dia de 22/07 teve margem de 210,8%, puxado pelo Diesel S10 vendido a R$8,63/L com custo de R$5,92/L."},
-      {ac:"#059669",icon:"✅",title:"SUBAÉ — Dado da Planilha Resultados Normalizado",text:"A litragem que tinha ficado travada por 1 dia (104.915 L) já voltou a bater com a soma dos relatórios diários (126.053 L). Confirma que foi mais uma falha pontual de atualização, já corrigida."},
-      {ac:"#dc2626",icon:"⚠️",title:"BR 020 — Lucro Líquido Piora: -R$20.043,43",text:"22 dias: 106.263 L · R$47.214 de lucro bruto · margem 44,4% (seguindo em melhora). Porém o lucro líquido acumulado piorou para -R$20.043,43 (era -R$12.770,48 há 2 dias) — as despesas fixas saltaram de R$43.469,16 para R$57.009,16 em apenas 2 dias, provavelmente um pagamento periódico (aluguel, seguro etc.), não necessariamente uma piora operacional. Vale confirmar a natureza do lançamento."},
-      {ac:"#059669",icon:"📈",title:"BOQUEIRÃO I — Segue Encolhendo o Prejuízo: -R$3.342,35",text:"Continua a trajetória de recuperação, cada vez mais perto do azul."},
-      {ac:"#2563eb",icon:"📌",title:"MTD Julho: 3.026.210 L · R$3.402.769",text:"22 dias. Média 137.555 L/dia · R$154.671/dia. Margem MTD: 112,4% — leve alta frente aos 112,1% anteriores. Projeção de fechamento (31 dias): ~4,26M L · ~R$4,79M de lucro bruto."}
+      {ac:"#059669",icon:"🏆",title:"ROMUALDO GALVAO — Segue Disparado: Margem 212,0%",text:"23 dias: 100.998 L · R$214.068 · margem 212,0%. Segue como a maior margem percentual da rede."},
+      {ac:"#059669",icon:"🚀",title:"JAGUARARI — Encostando na Liderança: Margem 199,5%",text:"23 dias: 119.257 L · R$237.875 · margem 199,5%, a menos de 3 pontos percentuais de ROMUALDO GALVAO. Segue como o maior lucro bruto individual da rede em julho."},
+      {ac:"#059669",icon:"✅",title:"COPACABANA — Litragem Corrigida na Aba Resultados",text:"A litragem de COPACABANA (01 a 23/07) estava com um erro de digitação (23.800 L) e foi corrigida para 232.800 L, batendo com o esperado. A margem também foi recalculada (1,13 R$/L). Algumas outras unidades ainda podem ter dados parciais no relatório de hoje — a aba Dashboard usa os dados somados dos relatórios diários e não é afetada."},
+      {ac:"#059669",icon:"📈",title:"BR 020 — Margem Sobe para 46,0%",text:"23 dias: 114.132 L · R$52.545 de lucro bruto · margem 46,0% — segue melhorando dia após dia desde meados do mês."},
+      {ac:"#d97706",icon:"⚠️",title:"CUSTÓDIA — Diesel S10 Vende Abaixo do Custo Pela 3ª Vez no Mês",text:"Em 23/07 o Diesel S10 fechou o dia com margem negativa (-R$0,01/L) mais uma vez — já é a terceira ocorrência em julho (19/07, 20/07 e agora 23/07). Padrão recorrente que vale revisar na precificação desse produto na unidade."},
+      {ac:"#2563eb",icon:"🆕",title:"Nova Aba: PrimeGov",text:"Adicionada a aba PrimeGov ao dashboard, com os valores por unidade informados a partir de hoje (01 a 23/07: R$1.635.268,04 no total). Será atualizada diariamente junto com as demais abas."},
+      {ac:"#2563eb",icon:"📌",title:"MTD Julho: 3.168.348 L · R$3.563.850",text:"23 dias. Média 137.754 L/dia · R$154.950/dia. Margem MTD: 112,5% — estável frente aos 112,4% anteriores. Projeção de fechamento (31 dias): ~4,27M L · ~R$4,80M de lucro bruto."}
     ],
     risks:[
-      {nivel:"CRÍTICO",unidade:"BR 020",produto:"GERAL (unidade)",data:"01 a 22/07",custo:6.51,hist:6.45,obs:"Margem bruta seguindo em melhora (44,4% MTD), mas o lucro líquido piorou para -R$20.043,43 (era -R$12.770,48 há 2 dias) devido a um salto nas despesas fixas (+R$13.540 em 2 dias). Reclassificado de ATENÇÃO para CRÍTICO até confirmar se é um lançamento pontual ou piora recorrente."},
-      {nivel:"ATENÇÃO",unidade:"CUSTÓDIA",produto:"GERAL (unidade)",data:"01 a 22/07",custo:0,hist:0,obs:"Lucro líquido do período: -R$8.496,70, leve melhora frente a -R$8.806,99. Despesas fixas (R$15.308,37) seguem altas para o volume da unidade (18.671 L)."},
-      {nivel:"ATENÇÃO",unidade:"BOQUEIRÃO I",produto:"DIESEL S10",data:"01 a 22/07",custo:6.30,hist:6.37,obs:"Lucro líquido do período: -R$3.342,35, seguindo a trajetória de recuperação, cada vez mais perto do positivo."},
+      {nivel:"ATENÇÃO",unidade:"CUSTÓDIA",produto:"DIESEL S10",data:"19, 20 e 23/07",custo:6.59,hist:6.30,obs:"Terceira vez no mês que o Diesel S10 vende abaixo do custo em um dia (23/07: margem de -R$0,01/L). Volume pequeno em cada ocorrência, mas o padrão se repete — revisar a precificação desse produto na unidade."},
+      {nivel:"ATENÇÃO",unidade:"BR 020",produto:"GERAL (unidade)",data:"04 a 23/07",custo:6.51,hist:6.45,obs:"Margem bruta em melhora constante (46,0% MTD, era 27,1% em 13/07). Segue em ATENÇÃO pela recuperação sustentada, mas ainda com lucro líquido negativo nos últimos relatórios."},
       {nivel:"VOL. ATÍPICO",unidade:"BOQUEIRÃO II",produto:"DIESEL S500 COMUM",data:"13/07 e 17/07",custo:0,hist:0,obs:"Dois dias no mês com mais de 10.000 L vendidos em um único dia — pode ser um padrão recorrente de reabastecimento em grandes lotes. Vale confirmar com a unidade se há um ciclo regular de entregas grandes."}
     ],
-    riskSummary:{inflado:"~R$ 0",ocorrencias:"BR 020 volta a CRÍTICO (despesas fixas em alta) · CUSTÓDIA e BOQUEIRÃO I em recuperação lenta",principal:"BR 020 · salto de despesas fixas",principalSub:"Lucro líquido -R$20.043,43 acumulado — piorou nos últimos 2 dias",vol:"BOQUEIRÃO II · 13/07 e 17/07",volSub:"Dois dias com mais de 10.000 L de Diesel S500 Comum",volBadge:"Padrão recorrente, a confirmar",ajustado:"~R$ 3,40M",margemAdj:"Margem 112,4%"},
+    riskSummary:{inflado:"~R$ 0",ocorrencias:"CUSTÓDIA Diesel S10 abaixo do custo (3ª vez) · COPACABANA corrigida nos Resultados",principal:"CUSTÓDIA · Diesel S10 abaixo do custo (recorrente)",principalSub:"3ª ocorrência no mês (19, 20 e 23/07)",vol:"BOQUEIRÃO II · 13/07 e 17/07",volSub:"Dois dias com mais de 10.000 L de Diesel S500 Comum",volBadge:"Padrão recorrente, a confirmar",ajustado:"~R$ 3,56M",margemAdj:"Margem 112,5%"},
     prefeituras: {
-      periodo: "22/Jul/2026",
+      periodo: "23/Jul/2026",
       rows: [
-        {unidade:"SUBAÉ",         prefeitura:"CANGUARETAMA",    faturado:887567.54, pago:194782.57, aberto:692784.97, afaturar:0, fiado:80242.41,  totalFiado:773027.38},
-        {unidade:"COPACABANA",    prefeitura:"LAGOA DE PEDRA",  faturado:315437.63, pago:116513.86, aberto:198923.77, afaturar:0, fiado:145425.71, totalFiado:344349.48},
-        {unidade:"MD",            prefeitura:"MATARACA-GABINETE",faturado:795798.44,pago:372520.42, aberto:423278.02, afaturar:0, fiado:129570.48, totalFiado:552848.50},
-        {unidade:"MD",            prefeitura:"MATARACA-SAÚDE",  faturado:108435.25, pago:104109.22, aberto:4326.03,   afaturar:0, fiado:37326.16,  totalFiado:41652.19},
-        {unidade:"EXTREMOZ",      prefeitura:"EXTREMOZ",        faturado:418693.52, pago:232588.97, aberto:186104.55, afaturar:0, fiado:257261.10, totalFiado:443365.65},
-        {unidade:"SANTO ANTONIO", prefeitura:"SÃO GONÇALO",     faturado:1059221.20,pago:1047388.86,aberto:11832.34,  afaturar:0, fiado:418637.31, totalFiado:430469.65},
-        {unidade:"ESP SANTO",     prefeitura:"ESP SANTO",       faturado:847824.86, pago:436123.82, aberto:411701.04, afaturar:0, fiado:227412.36, totalFiado:639113.40},
-        {unidade:"ESP SANTO",     prefeitura:"VÁRZEA",          faturado:219674.72, pago:149619.86, aberto:70054.86,  afaturar:0, fiado:65169.69,  totalFiado:135224.55},
-        {unidade:"ESP SANTO",     prefeitura:"JUNDIÁ",          faturado:79885.65,  pago:16789.90,  aberto:63095.75,  afaturar:0, fiado:77417.85,  totalFiado:140513.60}
+        {unidade:"SUBAÉ",         prefeitura:"CANGUARETAMA",    faturado:887567.54, pago:273882.05, aberto:613685.49, afaturar:0, fiado:97582.48,  totalFiado:711267.97},
+        {unidade:"COPACABANA",    prefeitura:"LAGOA DE PEDRA",  faturado:315437.63, pago:116513.86, aberto:198923.77, afaturar:0, fiado:152290.34, totalFiado:351214.11},
+        {unidade:"MD",            prefeitura:"MATARACA-GABINETE",faturado:795798.44,pago:372520.42, aberto:423278.02, afaturar:0, fiado:156155.71, totalFiado:579433.73},
+        {unidade:"MD",            prefeitura:"MATARACA-SAÚDE",  faturado:108435.25, pago:125865.47, aberto:-17430.22, afaturar:0, fiado:43356.30,  totalFiado:25926.08},
+        {unidade:"EXTREMOZ",      prefeitura:"EXTREMOZ",        faturado:418693.52, pago:232588.97, aberto:186104.55, afaturar:0, fiado:267484.80, totalFiado:453589.35},
+        {unidade:"SANTO ANTONIO", prefeitura:"SÃO GONÇALO",     faturado:1059221.20,pago:1054181.53,aberto:5039.67,   afaturar:0, fiado:443930.73, totalFiado:448970.40},
+        {unidade:"ESP SANTO",     prefeitura:"ESP SANTO",       faturado:847708.45, pago:523926.96, aberto:323781.49, afaturar:0, fiado:236897.22, totalFiado:560678.71},
+        {unidade:"ESP SANTO",     prefeitura:"VÁRZEA",          faturado:219674.72, pago:149619.86, aberto:70054.86,  afaturar:0, fiado:68759.24,  totalFiado:138814.10},
+        {unidade:"ESP SANTO",     prefeitura:"JUNDIÁ",          faturado:79885.65,  pago:16789.90,  aberto:63095.75,  afaturar:0, fiado:82684.93,  totalFiado:145780.68}
       ]
     },
     resultados: {
-      periodo: "01 a 22/julho",
+      periodo: "01 a 23/julho",
       headers: ["Unidade","Litragem","Lucro Bruto","Margem/L","Desp Fixas","Desp Variáveis","Juros Comb","Taxas/Tarifas","Sobra Planilha","Lucro Líquido","Fiado Marcos","Capital"],
       rows: [
-        ["MAMANGUAPE", 164050, 142741.75, 0.87, 88567.57, 13138.16, 0, 6657.81, 0, 34378.21, 68346.19, 0],
-        ["COPA", 224098, 253288.54, 1.13, 97392.14, 7841.35, 0, 15275.22, 0, 132779.83, 33752.01, 32014.54],
-        ["MD", 414155, 436212.91, 1.05, 122069.53, 20349.95, 0, 20645.57, 0, 273147.86, 120823.98, 0],
-        ["ESP SANTO", 65754, 101089.5, 1.54, 27379.77, 968.85, 0, 1265.28, 0, 71475.6, 166604.63, 1075746.78],
-        ["SUBAÉ", 126053, 194358.29, 1.54, 60922.72, 5805, 0, 8218.32, 0, 119412.25, 126455.46, 769448.99],
-        ["REDINHA", 123614, 168166.71, 1.36, 57072.56, 7638.89, 0, 32352.56, 0, 71102.7, 142016.69, 137644.1],
-        ["ROMUALDO", 95312, 201474.34, 2.11, 29410.5, 5549, 0, 56210.01, 0, 110304.83, 86829.07, 193475.11],
+        ["MAMANGUAPE", 169808, 148000.89, 0.87, 89667.57, 15303.16, 0, 6897.6, 0, 36132.56, 68346.19, 0],
+        ["COPA", 232800, 262508.54, 1.13, 98554.35, 8041.35, 0, 15533.17, 0, 140379.67, 38121.69, 32014.54],
+        ["MD", 437124, 456573.07, 1.04, 122069.53, 20764.95, 0, 20336.94, 0, 293401.65, 120823.98, 0],
+        ["ESP SANTO", 68958, 106396.53, 1.54, 27379.77, 968.85, 0, 1298.5, 0, 76749.41, 166604.63, 1075746.78],
+        ["SUBAÉ", 132301, 197731.04, 1.49, 62287.4, 5805, 0, 8343.31, 0, 121295.33, 126455.46, 769448.99],
+        ["REDINHA", 123614, 168166.71, 1.36, 57072.56, 7454.8, 0, 32352.56, 0, 71286.79, 142016.69, 137644.1],
+        ["ROMUALDO", 95312, 201474.65, 2.11, 29410.5, 5549, 0, 56210.01, 0, 110304.83, 86829.07, 193475.11],
         ["SG", 101490, 88929.49, 0.88, 64308.22, 836.61, 0, 3067.91, 0, 20716.75, 53871.13, 309283.82],
         ["JAGUARARI", 112982, 223850.91, 1.98, 63176.84, 2823.09, 1134.8, 51363.01, 0, 105353.17, 37800, 128094.16],
-        ["BAIXA DO MEIO", 78944, 124509.35, 1.58, 39851.12, 1294.05, 0, 13956.97, 0, 69407.81, 50702.3, 378360.98],
+        ["BAIXA DO MEIO", 81799, 129168.46, 1.58, 40101.12, 1294.05, 0, 14228.25, 0, 73545.04, 50702.3, 378360.98],
         ["BERNARDO VIEIRA", 76296, 59854.39, 0.78, 32900.49, 5013.36, 0, 4852.48, 0, 17088.06, 100888.83, 137726.57],
-        ["EXTREMOZ", 94757, 121059.66, 1.28, 55748.15, 4180, 0, 4868.52, 0, 56262.99, 80219.32, 686700.58],
+        ["EXTREMOZ", 97855, 126227.6, 1.29, 59248.15, 4180, 0, 4876.46, 0, 57922.99, 80219.32, 686700.58],
         ["GENIPABU", 73452, 77807.35, 1.06, 33385.94, 5941.89, 0, 4040.45, 0, 34439.07, 62102.09, 357754.07],
         ["RIACHUELO", 235391, 203282.9, 0.86, 102385.93, 15705.63, 0, 17467.17, 0, 67724.17, 111077.33, 285871.75],
-        ["SANTO ANTONIO", 139190, 180642.75, 1.3, 55959.49, 1198.27, 1468.2, 7012.25, 0, 115004.54, 106816.59, 450959.62],
+        ["SANTO ANTONIO", 145961, 190107.04, 1.3, 55959.49, 1648.27, 1468.2, 7302.76, 0, 123728.32, 111124.59, 450959.62],
         ["CUSTÓDIA", 18670, 12783.37, 0.68, 15308.37, 4270, 0, 1701.7, 0, -8496.7, 43740.12, 16685.25],
-        ["BOQUEIRÃO I", 76910, 58281.2, 0.76, 54341.85, 3981.24, 0, 3301.06, 0, -3342.35, 6300, 67220.4],
+        ["BOQUEIRÃO I", 76910, 58281.8, 0.76, 54341.85, 3981.24, 0, 3301.06, 0, -3342.35, 6300, 67220.4],
         ["BOQUEIRÃO II", 202334, 148719.55, 0.74, 101587.36, 9439.27, 0, 4947.19, 0, 32745.73, 68336.11, 132548.28],
-        ["BR020", 106262, 46156.02, 0.43, 57009.16, 5999.27, 0, 3191.02, 0, -20043.43, 69143.76, 122889.16],
-        ["JAGUARIBARA II", 213233, 146224.57, 0.69, 66416.29, 7845.43, 0, 4884.99, 0, 67077.96, 69862.09, 216113.55]
+        ["BR020", 106262, 46156.05, 0.43, 57009.16, 5999.27, 0, 3191.02, 0, -20043.43, 69143.76, 122889.16],
+        ["JAGUARIBARA II", 213233, 146224.57, 0.69, 66416.29, 7845.43, 0, 4884.99, 0, 67077.96, 69862.15, 216113.55]
       ],
-      totais: ["TOTAIS",2742949,2989434.15,1.03,1225194.00,129819.31,2603.00,265278.79,0,1366539.05,1605687.76,5498537.71]
+      totais: ["TOTAIS",2802553,3052244.57,1.09,1232570.89,132865.22,2603.00,266196.44,0,1418009.02,1614365.44,5498537.71]
+    },
+    primegov: {
+      periodo: "23/Jul/2026",
+      rows: [
+        {unidade:"JAGUARARI", valor:476205.96},
+        {unidade:"ROMUALDO GALVAO", valor:431709.44},
+        {unidade:"MM", valor:347825.66},
+        {unidade:"REDINHA", valor:169297.97},
+        {unidade:"RIACHUELO", valor:62954.33},
+        {unidade:"BAIXA DO MEIO", valor:36188.05},
+        {unidade:"SUBAÉ", valor:39043.90},
+        {unidade:"COPACABANA", valor:31589.18},
+        {unidade:"EXTREMOZ", valor:19299.76},
+        {unidade:"BERNARDO VIEIRA", valor:10670.60},
+        {unidade:"BR 406 COMERCIAL", valor:7069.51},
+        {unidade:"GENIPABU", valor:1551.33},
+        {unidade:"SG", valor:1015.71},
+        {unidade:"SANTO ANTONIO", valor:846.64}
+      ]
     }
   }
 
@@ -804,6 +852,7 @@ function loadMonth(k){
   buildRiskTable(m.risks, m.riskSummary);
   buildResultados(m);
   buildPrefeituras(m);
+  buildPrimeGov(m);
   buildChart(m.daily);
 }
 
@@ -1193,6 +1242,50 @@ function buildPrefeituras(m){
     "<td style='font-family:var(--mono);font-size:11px;text-align:right'>"+fmt(tot.aberto)+"</td>"+
     "<td style='font-family:var(--mono);font-size:11px;text-align:right'>"+fmt(tot.afaturar)+"</td>"+
     "<td style='font-family:var(--mono);font-size:11px;text-align:right'>"+fmt(tot.fiado)+"</td>"+
+  "</tr>";
+}
+
+// ══════════════════════════════════════════════
+//  PRIMEGOV
+// ══════════════════════════════════════════════
+function buildPrimeGov(m){
+  const p=m&&m.primegov;
+  const titleEl=document.getElementById("primegov-card-title");
+  const headEl=document.getElementById("primegovHead");
+  const bodyEl=document.getElementById("primegovBody");
+  document.getElementById("primegov-title").textContent="PrimeGov — "+(m?m.label:"");
+
+  if(!p||!p.rows||!p.rows.length){
+    titleEl.textContent="Sem dados de PrimeGov para este período.";
+    headEl.innerHTML=""; bodyEl.innerHTML="";
+    document.getElementById("primegov-total").textContent="—";
+    document.getElementById("primegov-sub").textContent="—";
+    return;
+  }
+
+  titleEl.textContent="Valores por unidade · "+p.periodo;
+  const fmt=function(v){return "R$ "+v.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});};
+  const fmtK=function(v){
+    if(v>=1e6) return "R$ "+(v/1e6).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})+"M";
+    return "R$ "+(v/1e3).toLocaleString("pt-BR",{minimumFractionDigits:0,maximumFractionDigits:0})+"K";
+  };
+
+  const tot=p.rows.reduce((s,r)=>s+r.valor,0);
+  document.getElementById("primegov-total").textContent=fmtK(tot);
+  document.getElementById("primegov-sub").textContent=p.rows.length+" unidades · "+p.periodo;
+
+  headEl.innerHTML="<tr><th>Unidade</th><th style='text-align:right'>Valor</th></tr>";
+  bodyEl.innerHTML="";
+  const sorted=[...p.rows].sort((a,b)=>b.valor-a.valor);
+  sorted.forEach(function(r){
+    bodyEl.innerHTML+="<tr>"+
+      "<td style='font-weight:600;font-size:12px'>"+r.unidade+"</td>"+
+      "<td style='font-family:var(--mono);font-size:11px;text-align:right'>"+fmt(r.valor)+"</td>"+
+    "</tr>";
+  });
+  bodyEl.innerHTML+="<tr class='res-total'>"+
+    "<td>TOTAIS</td>"+
+    "<td style='font-family:var(--mono);font-size:11px;text-align:right'>"+fmt(tot)+"</td>"+
   "</tr>";
 }
 
