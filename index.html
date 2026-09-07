@@ -884,7 +884,112 @@ const MONTHS = {
         {unidade:"GENIPABU", valor:1255.68}
       ]
     }
+  },
+  "2026-09": {
+    label:"Setembro 2026", unidades:21, diasMes:30,
+    status:"Atualizado até 03/09/26",
+    daily:[
+      {d:"01/09",dow:"Ter",lit:192636,lucro:208229},
+      {d:"02/09",dow:"Qua",lit:179705,lucro:197127},
+      {d:"03/09",dow:"Qui",lit:182898,lucro:203923}
+    ],
+    units:[
+      {uf:"PB",name:"DOMINGOS MD",lit:60072,lucro:58902},
+      {uf:"RN",name:"DOMINGOS SUBAE",lit:27678,lucro:58078},
+      {uf:"RN",name:"DOMINGOS JAGUARARI",lit:29193,lucro:29126},
+      {uf:"RN",name:"DOMINGOS COPACABANA",lit:36438,lucro:46812},
+      {uf:"RN",name:"DOMINGOS ROMUALDO GALVAO",lit:21246,lucro:26256},
+      {uf:"RN",name:"DOMINGOS BR 406 COMERCIAL",lit:24121,lucro:35831},
+      {uf:"RN",name:"DOMINGOS SANTO ANTONIO",lit:19789,lucro:31906},
+      {uf:"RN",name:"DOMINGOS REDINHA",lit:19102,lucro:25285},
+      {uf:"PB",name:"DOMINGOS MAMANGUAPE",lit:23226,lucro:26347},
+      {uf:"CE",name:"DOMINGOS BOQUEIRÃO II",lit:80620,lucro:56137},
+      {uf:"RN",name:"DOMINGOS BAIXA DO MEIO",lit:12089,lucro:18735},
+      {uf:"RN",name:"DOMINGOS RIACHUELO",lit:34689,lucro:23865},
+      {uf:"RN",name:"DOMINGOS EXTREMOZ",lit:16383,lucro:24659},
+      {uf:"RN",name:"DOMINGOS ESPIRITO SANTO",lit:18201,lucro:33617},
+      {uf:"RN",name:"DOMINGOS MM",lit:13396,lucro:16061},
+      {uf:"RN",name:"DOMINGOS SG",lit:22132,lucro:22737},
+      {uf:"CE",name:"DOMINGOS JAGUARIBARA II",lit:43561,lucro:19531},
+      {uf:"RN",name:"DOMINGOS GENIPABU",lit:18915,lucro:19080},
+      {uf:"RN",name:"DOMINGOS BERNARDO VIEIRA",lit:9522,lucro:12385},
+      {uf:"CE",name:"DOMINGOS BR 020",lit:24869,lucro:23929},
+      {uf:"PE",name:"DOMINGOS CUSTÓDIA",lit:0,lucro:0}
+    ],
+    alerts:[
+      {ac:"#2563eb",icon:"🚀",title:"Início de Setembro: 555.239 L · R$609.279",text:"3 dias. Média 185.080 L/dia · R$203.093/dia. Margem MTD: 109,73%. Projeção para os 30 dias do mês: ~5,55M L."},
+      {ac:"#d97706",icon:"⚠️",title:"6 Unidades Começam o Mês no Vermelho",text:"MAMANGUAPE (-R$12.869,96), JAGUARARI (-R$12.138,56), SG (-R$5.614,64), BR020 (-R$5.743,71), JAGUARIBARA II (-R$5.149,58) e BOQUEIRÃO II (-R$5.041,01) fecham os primeiros 3 dias com lucro líquido negativo. Vale acompanhar se é sazonalidade de início de mês ou tendência a se firmar."},
+      {ac:"#d97706",icon:"📋",title:"CUSTÓDIA Ausente dos Relatórios Diários",text:"A unidade não aparece nos PDFs de vendas de 01, 02 e 03/09, nem na aba Resultados. Recomenda-se confirmar se a unidade está operando normalmente ou se há uma falha no envio do relatório."},
+      {ac:"#059669",icon:"✅",title:"SANTO ANTONIO e ESP SANTO com os Melhores Resultados",text:"Santo Antonio lidera com R$20.353,62 de lucro líquido, seguido de Esp Santo (R$27.729,55) e MD (R$30.280,78) — os três com boa margem bruta acima de R$0,99/L."},
+      {ac:"#2563eb",icon:"🏛️",title:"PrimeGov: R$438.565,06 no Período 01–03/09",text:"JAGUARARI segue líder (R$167.349,20), seguido de ROMUALDO GALVAO (R$52.240,33) e COPACABANA (R$57.096,35). BR406 e MM ainda sem valores neste início de mês."},
+      {ac:"#d97706",icon:"📊",title:"JAGUARIBARA II e RIACHUELO com as Piores Margens: R$0,45/L e R$0,68/L",text:"Início de mês já mostra o padrão recorrente de margem apertada, mas desta vez BOQUEIRÃO II melhorou para R$0,70/L, deixando de ser a pior da rede."}
+    ],
+    risks:[
+      {nivel:"ATENÇÃO",unidade:"MAMANGUAPE / JAGUARARI",produto:"GERAL (início do mês)",data:"01 a 03/09",custo:0,hist:0,obs:"As duas unidades com pior resultado nos primeiros 3 dias de setembro: Mamanguape -R$12.869,96 e Jaguarari -R$12.138,56. Vale acompanhar se a tendência se mantém nos próximos dias."},
+      {nivel:"ATENÇÃO",unidade:"CUSTÓDIA",produto:"AUSÊNCIA DE DADOS",data:"01 a 03/09",custo:0,hist:0,obs:"A unidade não consta em nenhum dos relatórios diários (PDFs) nem na aba Resultados do período. Recomenda-se confirmar com a unidade se houve falha no envio do relatório de vendas."},
+      {nivel:"ATENÇÃO",unidade:"SG / BR020 / JAGUARIBARA II / BOQUEIRÃO II",produto:"GERAL (início do mês)",data:"01 a 03/09",custo:0,hist:0,obs:"Todas com lucro líquido negativo nos primeiros 3 dias (-R$5.614,64, -R$5.743,71, -R$5.149,58 e -R$5.041,01 respectivamente). Valores pequenos, mas somam-se às 6 unidades no vermelho no início do mês — acompanhar evolução."},
+      {nivel:"ATENÇÃO",unidade:"JAGUARIBARA II / RIACHUELO",produto:"DIESEL S500 / DIESEL S10",data:"01 a 03/09",custo:0,hist:0,obs:"Início de setembro já mostra as margens mais apertadas da rede (R$0,45/L e R$0,68/L). BOQUEIRÃO II, historicamente também nesse grupo, melhorou para R$0,70/L neste início de mês."}
+    ],
+    riskSummary:{inflado:"~R$ 0",ocorrencias:"6 unidades começam o mês no vermelho · CUSTÓDIA ausente dos relatórios · JAGUARIBARA II/RIACHUELO com margens mais apertadas",principal:"MAMANGUAPE / JAGUARARI · Lucro líquido -R$12.869,96 e -R$12.138,56 nos 3 primeiros dias",principalSub:"Acompanhar se a tendência negativa se mantém ao longo do mês",vol:"JAGUARIBARA II / RIACHUELO · Margens de R$0,45/L e R$0,68/L",volSub:"BOQUEIRÃO II melhorou para R$0,70/L neste início de mês",volBadge:"Início de mês, acompanhar",ajustado:"~R$ 0,61M",margemAdj:"Margem 109,73% (3 dias)"},
+    prefeituras: {
+      periodo: "31/Ago/2026",
+      rows: [
+        {unidade:"SUBAÉ",         prefeitura:"CANGUARETAMA",    faturado:1232812.08, pago:781498.66, aberto:451313.42, afaturar:0, fiado:633969.94, totalFiado:1085283.36},
+        {unidade:"COPACABANA",    prefeitura:"LAGOA DE PEDRA",  faturado:395122.03,  pago:199919.31, aberto:195202.72, afaturar:0, fiado:177545.43, totalFiado:372748.15},
+        {unidade:"MD",            prefeitura:"MATARACA-GABINETE",faturado:0,         pago:0,         aberto:0,         afaturar:0, fiado:0,         totalFiado:0},
+        {unidade:"MD",            prefeitura:"MATARACA-SAÚDE",  faturado:0,          pago:0,         aberto:0,         afaturar:0, fiado:0,         totalFiado:0},
+        {unidade:"EXTREMOZ",      prefeitura:"EXTREMOZ",        faturado:467353.69,  pago:466045.01, aberto:1308.68,   afaturar:0, fiado:373290.13, totalFiado:374598.81},
+        {unidade:"SANTO ANTONIO", prefeitura:"SÃO GONÇALO",     faturado:279331.48,  pago:85290.94,  aberto:194040.54, afaturar:0, fiado:578016.03, totalFiado:772056.57},
+        {unidade:"ESP SANTO",     prefeitura:"ESP SANTO",       faturado:616224.36,  pago:289282.47, aberto:326941.89, afaturar:0, fiado:203524.25, totalFiado:530466.14},
+        {unidade:"ESP SANTO",     prefeitura:"GOIANINHA",       faturado:0,          pago:0,         aberto:0,         afaturar:0, fiado:232400.00, totalFiado:232400.00},
+        {unidade:"ESP SANTO",     prefeitura:"VÁRZEA",          faturado:315562.85,  pago:120200.75, aberto:195362.10, afaturar:0, fiado:82092.03,  totalFiado:277454.13},
+        {unidade:"ESP SANTO",     prefeitura:"JUNDIÁ",          faturado:158118.99,  pago:41301.79,  aberto:116817.20, afaturar:0, fiado:60523.06,  totalFiado:177340.26}
+      ]
+    },
+    resultados: {
+      periodo: "01 a 03/setembro",
+      headers: ["Unidade","Litragem","Lucro Bruto","Margem/L","Desp Fixas","Desp Variáveis","Juros Comb","Taxas/Tarifas","Sobra Planilha","Lucro Líquido","Fiado Marcos","Capital"],
+      rows: [
+        ["MAMANGUAPE", 23226, 26260.76, 1.13, 35428.90, 3407.28, 0, 294.54, 0, -12869.96, 77280.94, 0],
+        ["COPA", 36438, 46922.90, 1.29, 20652.88, 2858.73, 0, 11918.14, 0, 11493.15, 0, 61652.32],
+        ["MD", 60072, 59655.31, 0.99, 19652.74, 7830.76, 0, 1891.03, 0, 30280.78, 32197.81, 0],
+        ["ESP SANTO", 18201, 33584.17, 1.85, 5160.00, 162.00, 0, 532.62, 0, 27729.55, 133.85, 1080746.78],
+        ["SUBAÉ", 27678, 58721.59, 2.12, 30090.21, 0, 0, 3011.41, 0, 25619.97, 165013.16, 764448.99],
+        ["REDINHA", 19102, 25284.89, 1.32, 9638.59, 77.00, 0, 5873.92, 0, 9695.38, 81195.71, 137644.10],
+        ["ROMUALDO", 21246, 26152.60, 1.23, 7274.00, 0, 0, 13956.92, 0, 4921.68, 0, 59657.14],
+        ["SG", 22132, 22786.76, 1.03, 20507.98, 6150.00, 0, 1743.42, 0, -5614.64, 37164.57, 309283.82],
+        ["JAGUARARI", 29193, 29120.06, 1.00, 27666.77, 2871.86, 0, 10719.99, 0, -12138.56, 0, 81692.86],
+        ["BAIXA DO MEIO", 12089, 18734.71, 1.55, 2030.00, 0, 0, 456.17, 0, 16248.54, 0, 455456.98],
+        ["BERNARDO VIEIRA", 9522, 12388.24, 1.30, 6090.20, 1321.49, 0, 1992.90, 0, 2983.65, 107488.99, 137726.57],
+        ["EXTREMOZ", 16383, 24682.83, 1.51, 6545.00, 0, 0, 445.20, 0, 17692.63, 35196.85, 686700.58],
+        ["GENIPABU", 18915, 19097.57, 1.01, 9339.98, 4114.34, 0, 1288.11, 0, 4355.14, 113129.35, 349754.07],
+        ["RIACHUELO", 34689, 23739.55, 0.68, 11870.00, 6234.39, 0, 4651.43, 0, 983.73, 126315.00, 265295.79],
+        ["SANTO ANTONIO", 19788, 31825.77, 1.61, 8777.20, 1011.00, 0, 1683.95, 0, 20353.62, 0, 654727.16],
+        ["BOQUEIRÃO II", 80620, 56164.34, 0.70, 54706.05, 5380.00, 0, 1119.30, 0, -5041.01, 15645.11, 513665.87],
+        ["BR020", 24869, 26441.52, 1.06, 32156.31, 0, 0, 28.92, 0, -5743.71, 92655.50, 95729.74],
+        ["JAGUARIBARA II", 43561, 19742.72, 0.45, 23130.24, 1487.00, 0, 275.06, 0, -5149.58, 0, 239172.85]
+      ],
+      totais: ["TOTAIS",517722,561306.29,0.99,330717.05,42905.85,0,61883.03,0,125800.36,883416.84,5893355.62]
+    },
+    primegov: {
+      periodo: "03/Set/2026",
+      rows: [
+        {unidade:"JAGUARARI", valor:167349.20},
+        {unidade:"ROMUALDO GALVAO", valor:52240.33},
+        {unidade:"COPACABANA", valor:57096.35},
+        {unidade:"REDINHA", valor:52066.36},
+        {unidade:"RIACHUELO", valor:27112.81},
+        {unidade:"SANTO ANTONIO", valor:15276.28},
+        {unidade:"BERNARDO VIEIRA", valor:21342.33},
+        {unidade:"SUBAÉ", valor:10032.51},
+        {unidade:"BAIXA DO MEIO", valor:10906.74},
+        {unidade:"EXTREMOZ", valor:7330.21},
+        {unidade:"SG", valor:15640.34},
+        {unidade:"GENIPABU", valor:2171.60}
+      ]
+    }
   }
+
 
 
 
@@ -915,7 +1020,7 @@ if(sessionStorage.getItem("pd_auth")){document.getElementById("login-overlay").s
 // ══════════════════════════════════════════════
 //  STATE & INIT
 // ══════════════════════════════════════════════
-let cur="2026-08";
+let cur="2026-09";
 let cs={};
 
 function init(){
