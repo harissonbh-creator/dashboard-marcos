@@ -1016,6 +1016,108 @@ const MONTHS = {
         {unidade:"RIACHUELO", valor:10619.29}
       ]
     }
+  },
+    "2026-10": {
+    label:"Outubro 2026", unidades:20, diasMes:31,
+    status:"Resultados até 04/10/26 (todas as unidades) · Diário até 04/10/26",
+    daily:[
+      {d:"01/10",dow:"Qui",lit:157882,lucro:168166},
+      {d:"02/10",dow:"Sex",lit:177873,lucro:192070},
+      {d:"03/10",dow:"Sáb",lit:137314,lucro:145828},
+      {d:"04/10",dow:"Dom",lit:110680,lucro:127987}
+    ],
+    units:[
+      {uf:"PB",name:"DOMINGOS MD",lit:69335,lucro:43129},
+      {uf:"RN",name:"DOMINGOS SUBAE",lit:29449,lucro:46069},
+      {uf:"RN",name:"DOMINGOS JAGUARARI",lit:23973,lucro:37299},
+      {uf:"RN",name:"DOMINGOS COPACABANA",lit:34184,lucro:46068},
+      {uf:"RN",name:"DOMINGOS ROMUALDO GALVAO",lit:17785,lucro:27712},
+      {uf:"RN",name:"DOMINGOS BR 406 COMERCIAL",lit:34718,lucro:41009},
+      {uf:"RN",name:"DOMINGOS SANTO ANTONIO",lit:32467,lucro:40012},
+      {uf:"RN",name:"DOMINGOS REDINHA",lit:25048,lucro:32081},
+      {uf:"PB",name:"DOMINGOS MAMANGUAPE",lit:32870,lucro:32842},
+      {uf:"CE",name:"DOMINGOS BOQUEIRÃO II",lit:35012,lucro:24733},
+      {uf:"RN",name:"DOMINGOS BAIXA DO MEIO",lit:20549,lucro:32568},
+      {uf:"RN",name:"DOMINGOS RIACHUELO",lit:42984,lucro:30592},
+      {uf:"RN",name:"DOMINGOS EXTREMOZ",lit:22784,lucro:22679},
+      {uf:"RN",name:"DOMINGOS ESPIRITO SANTO",lit:22827,lucro:47517},
+      {uf:"RN",name:"DOMINGOS MM",lit:29607,lucro:33109},
+      {uf:"RN",name:"DOMINGOS SG",lit:28352,lucro:25360},
+      {uf:"CE",name:"DOMINGOS JAGUARIBARA II",lit:31687,lucro:20056},
+      {uf:"RN",name:"DOMINGOS GENIPABU",lit:21646,lucro:23209},
+      {uf:"RN",name:"DOMINGOS BERNARDO VIEIRA",lit:14158,lucro:15881},
+      {uf:"CE",name:"DOMINGOS BR 020",lit:14014,lucro:12127}
+    ],
+    alerts:[
+      {ac:"#2563eb",icon:"🆕",title:"Início de Outubro/2026: 519.125 L · R$559.932,80",text:"Lucro Líquido do período 01–04/10: R$307.602,37. 16 das 18 unidades da aba Resultados já positivas; MAMANGUAPE (-R$3.601,17) e BOQUEIRÃO II (-R$2.428,54) ainda negativas — normal no início do mês, quando despesas fixas já contam integralmente mas as vendas ainda estão se acumulando."},
+      {ac:"#059669",icon:"✅",title:"4 Dias de PDF Diário Processados (01 a 04/10)",text:"80 conferências de unidade validadas contra o Total Geral de cada dia, sem divergência em nenhum dos quatro dias (157.881,77 L / 177.873,13 L / 137.314,35 L / 110.680,18 L). Gráfico diário de outubro iniciado."},
+      {ac:"#d97706",icon:"📊",title:"ESP SANTO Abre Outubro com a Melhor Margem: R$2,08/L",text:"Folga grande sobre o restante da rede neste início de mês. RIACHUELO (R$0,71/L) e BOQUEIRÃO II (R$0,71/L) seguem como as margens mais apertadas, com MAMANGUAPE ainda no vermelho."},
+      {ac:"#2563eb",icon:"🏛️",title:"PrimeGov: R$746.979,06 (Sem Período Fixo)",text:"Novo snapshot independente de outubro. JAGUARARI segue líder (R$235.312,08), à frente de ROMUALDO GALVAO (R$167.260,21). BR406 e MM sem valor informado neste snapshot."},
+      {ac:"#d97706",icon:"⚠️",title:"Margem/Litro do TOTAIS Segue Divergente (1ª Vez em Outubro)",text:"A célula de Margem/Litro da linha TOTAIS mostra R$0,95, mas o cálculo direto dá R$1,08. Mesmo padrão que se repetiu 9 vezes seguidas em setembro — segue sem correção na planilha, agora no mês novo."},
+      {ac:"#2563eb",icon:"🏘️",title:"Prefeituras: Novos Ciclos de Faturamento no Início do Mês",text:"EXTREMOZ zerou (invoice anterior quitada em 30/09, Em Aberto era de só R$1.228,49). SANTO ANTONIO/SÃO GONÇALO, VÁRZEA e JUNDIÁ também iniciaram com Faturado menor que o fechamento de setembro — a confirmar com Harisson se é o padrão normal de virada de mês para essas prefeituras específicas."}
+    ],
+    risks:[
+      {nivel:"ATENÇÃO",unidade:"REDE",produto:"MARGEM/LITRO DO TOTAIS (planilha original)",data:"01 a 04/10",custo:0.95,hist:1.08,obs:"A célula de Margem/Litro da linha TOTAIS mostra R$0,95, divergindo do cálculo direto Lucro Bruto ÷ Litragem (R$1,08). Mesma divergência recorrente de setembro (9 atualizações seguidas), agora reaberta em outubro — recomendo revisar a fórmula dessa célula na planilha original."},
+      {nivel:"ATENÇÃO",unidade:"MAMANGUAPE / BOQUEIRÃO II",produto:"GERAL (início de mês)",data:"01 a 04/10",custo:0,hist:0,obs:"Únicas duas unidades ainda com Lucro Líquido negativo no início de outubro (MAMANGUAPE -R$3.601,17; BOQUEIRÃO II -R$2.428,54) — padrão típico de início de mês (despesas fixas já lançadas por completo, vendas ainda no início), mas vale acompanhar se persistir nas próximas atualizações."},
+      {nivel:"ATENÇÃO",unidade:"PREFEITURAS",produto:"EXTREMOZ / SÃO GONÇALO / VÁRZEA / JUNDIÁ",data:"01 a 04/10",custo:0,hist:0,obs:"Faturado/Pago caíram em relação ao fechamento de setembro nessas 4 linhas, com Em Aberto não totalmente zerado em alguns casos (ex.: VÁRZEA Em Aberto ainda R$64.687,26). Pode ser novo ciclo de faturamento mensal dessas prefeituras — a confirmar com Harisson, seguindo a mesma lógica já validada para GOIANINHA."}
+    ],
+    riskSummary:{inflado:"~R$ 0",ocorrencias:"Margem/Litro do TOTAIS divergente logo na 1ª atualização de outubro · 2 unidades ainda negativas no início do mês · Prefeituras com possíveis novos ciclos a confirmar",principal:"REDE · Margem/Litro do TOTAIS diverge do cálculo direto (R$0,95 na planilha vs R$1,08 calculado), repetindo o padrão recorrente de setembro",principalSub:"Todas as linhas por unidade batem — recomendar revisão da fórmula da célula TOTAIS na planilha original",vol:"MAMANGUAPE · Lucro Líquido negativo no início do mês (-R$3.601,17)",volSub:"Padrão típico de início de mês; acompanhar se persiste",volBadge:"Início de mês, acompanhar",ajustado:"~R$ 0,56M (Resultados, 18 unidades, 01-04/10)",margemAdj:"Margem R$1,08/L calculada (período 01-04/10)"},
+    prefeituras: {
+      periodo: "01 a 04/Out/2026 (todos os grupos atualizados)",
+      rows: [
+        {unidade:"SUBAÉ",         prefeitura:"CANGUARETAMA",    faturado:983127.00,  pago:402617.91, aberto:580509.09, afaturar:0, fiado:85150.03,  totalFiado:665659.12},
+        {unidade:"COPACABANA",    prefeitura:"LAGOA DE PEDRA",  faturado:559763.96,  pago:343877.79, aberto:215886.17, afaturar:0, fiado:9245.37,   totalFiado:225131.54},
+        {unidade:"EXTREMOZ",      prefeitura:"EXTREMOZ",        faturado:0,          pago:0,         aberto:0,         afaturar:0, fiado:0,         totalFiado:0},
+        {unidade:"SANTO ANTONIO", prefeitura:"SÃO GONÇALO",     faturado:261001.10,  pago:203019.24, aberto:57981.86,  afaturar:0, fiado:71521.51,  totalFiado:129503.37},
+        {unidade:"ESP SANTO",     prefeitura:"ESP SANTO",       faturado:524639.17,  pago:249955.90, aberto:274683.27, afaturar:0, fiado:48986.70,  totalFiado:323669.97},
+        {unidade:"ESP SANTO",     prefeitura:"GOIANINHA",       faturado:225654.03,  pago:217177.68, aberto:8476.35,   afaturar:0, fiado:55374.54,  totalFiado:63850.89},
+        {unidade:"ESP SANTO",     prefeitura:"VÁRZEA",          faturado:178075.33,  pago:113388.07, aberto:64687.26,  afaturar:0, fiado:9036.13,   totalFiado:73723.39},
+        {unidade:"ESP SANTO",     prefeitura:"JUNDIÁ",          faturado:225457.57,  pago:114530.48, aberto:110927.09, afaturar:0, fiado:12132.41,  totalFiado:123059.50}
+      ]
+    },
+    resultados: {
+      periodo: "01 a 04/outubro (todas as unidades atualizadas)",
+      headers: ["Unidade","Litragem","Lucro Bruto","Margem/L","Desp Fixas","Desp Variáveis","Juros Comb","Taxas/Tarifas","Sobra Planilha","Lucro Líquido","Fiado Marcos","Capital"],
+      rows: [
+        ["MAMANGUAPE", 32870, 32841.62, 1.00, 36240.00, 0, 0, 202.79, 0, -3601.17, 36497.75, 0],
+        ["COPA", 34184, 46068.16, 1.35, 20632.23, 2752.94, 0, 647.75, 0, 22035.24, 0, 57301.90],
+        ["MD", 69335, 43128.70, 0.62, 7996.51, 4014.27, 0, 1818.90, 0, 29299.02, 10150.00, 7496.34],
+        ["ESP SANTO", 22827, 47517.13, 2.08, 6100.00, 3153.04, 0, 405.69, 0, 37858.40, 0, 1235565.29],
+        ["SUBAÉ", 29449, 46068.81, 1.56, 9595.00, 235.00, 0, 277.62, 0, 35961.19, 102482.68, 764448.99],
+        ["REDINHA", 25048, 32080.76, 1.28, 7138.31, 1076.00, 0, 828.07, 0, 23038.38, 1080.00, 129720.21],
+        ["ROMUALDO", 17785, 27712.22, 1.56, 5410.00, 240.00, 0, 338.19, 0, 21724.03, 0, 74305.94],
+        ["SG", 28352, 25360.06, 0.89, 20279.98, 50.00, 0, -1011.12, 0, 6041.20, 11333.89, 309283.82],
+        ["JAGUARARI", 23973, 37298.62, 1.56, 26356.77, 10.00, 636.95, 0, 0, 10294.90, 0, 151284.87],
+        ["BAIXA DO MEIO", 20549, 32567.81, 1.58, 3002.12, 785.00, 0, 496.94, 0, 28283.75, 0, 517231.14],
+        ["BERNARDO VIEIRA", 14158, 15881.25, 1.12, 8565.20, 2698.63, 0, 341.95, 0, 4275.47, 78509.79, 137726.57],
+        ["EXTREMOZ", 22784, 22679.36, 1.00, 8489.45, 0, 0, 131.70, 0, 14058.21, 0, 762806.59],
+        ["GENIPABU", 21646, 23209.09, 1.07, 4659.98, 1776.83, 0, 1002.74, 0, 15769.54, 91604.93, 349754.07],
+        ["RIACHUELO", 42984, 30592.12, 0.71, 5570.00, 1890.93, 0, -1725.06, 0, 24856.25, 129215.79, 265295.79],
+        ["SANTO ANTONIO", 32467, 40012.25, 1.23, 7912.71, 28.00, 0, 186.26, 0, 31885.28, 0, 717089.92],
+        ["BOQUEIRAO II", 35012, 24732.74, 0.71, 26536.46, 20.00, 0, 604.82, 0, -2428.54, 0, 515128.65],
+        ["BR020", 14014, 12126.55, 0.87, 7340.00, 100.00, 0, 155.07, 0, 4531.48, 93970.40, 95729.74],
+        ["JAGUARIBARA II", 31687, 20055.55, 0.63, 15550.00, 0, 0, 785.81, 0, 3719.74, 0, 291054.94]
+      ],
+      totais: ["TOTAIS",519125,559932.80,0.95,227374.72,18830.64,636.95,5488.12,0,307602.37,554845.23,6381224.77]
+    },
+    primegov: {
+      periodo: "04/Out/2026",
+      rows: [
+        {unidade:"ROMUALDO GALVAO", valor:167260.21},
+        {unidade:"JAGUARARI", valor:235312.08},
+        {unidade:"BERNARDO VIEIRA", valor:35392.48},
+        {unidade:"REDINHA", valor:61441.09},
+        {unidade:"GENIPABU", valor:857.00},
+        {unidade:"SG", valor:24452.15},
+        {unidade:"EXTREMOZ", valor:9710.95},
+        {unidade:"SANTO ANTONIO", valor:39459.19},
+        {unidade:"COPACABANA", valor:105726.57},
+        {unidade:"BAIXA DO MEIO", valor:23374.76},
+        {unidade:"ESP SANTO", valor:5901.00},
+        {unidade:"SUBAÉ", valor:11498.00},
+        {unidade:"RIACHUELO", valor:26593.58}
+      ]
+    }
   }
 
 
@@ -1049,7 +1151,7 @@ if(sessionStorage.getItem("pd_auth")){document.getElementById("login-overlay").s
 // ══════════════════════════════════════════════
 //  STATE & INIT
 // ══════════════════════════════════════════════
-let cur="2026-09";
+let cur="2026-10";
 let cs={};
 
 function init(){
