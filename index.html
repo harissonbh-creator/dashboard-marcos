@@ -1150,6 +1150,108 @@ const MONTHS = {
         {unidade:"RIACHUELO", valor:35334.36}
       ]
     }
+  },
+    "2026-11": {
+    label:"Novembro 2026", unidades:19, diasMes:30,
+    status:"Resultados 01-18/11 (19 unidades, mês em andamento) · Litragem de MM, BR406 e nova empresa POSTO MT conferida via relatório analítico (sem dado de lucro) · Diário (gráfico) aguardando PDFs no formato padrão",
+    daily:[],
+    units:[
+      {uf:"PB",name:"DOMINGOS MAMANGUAPE",lit:113505,lucro:127752},
+      {uf:"RN",name:"DOMINGOS COPACABANA",lit:261148,lucro:269556},
+      {uf:"PB",name:"DOMINGOS MD",lit:297770,lucro:238718},
+      {uf:"RN",name:"DOMINGOS ESPIRITO SANTO",lit:89548,lucro:201197},
+      {uf:"RN",name:"DOMINGOS SUBAE",lit:99965,lucro:147604},
+      {uf:"RN",name:"DOMINGOS REDINHA",lit:87056,lucro:137349},
+      {uf:"RN",name:"DOMINGOS ROMUALDO GALVAO",lit:88741,lucro:168015},
+      {uf:"RN",name:"DOMINGOS SG",lit:87606,lucro:106574},
+      {uf:"RN",name:"DOMINGOS JAGUARARI",lit:119600,lucro:220715},
+      {uf:"RN",name:"DOMINGOS BAIXA DO MEIO",lit:74581,lucro:152943},
+      {uf:"RN",name:"DOMINGOS BERNARDO VIEIRA",lit:62124,lucro:65834},
+      {uf:"RN",name:"DOMINGOS EXTREMOZ",lit:91378,lucro:128263},
+      {uf:"RN",name:"DOMINGOS GENIPABU",lit:106542,lucro:111321},
+      {uf:"RN",name:"DOMINGOS RIACHUELO",lit:170103,lucro:140093},
+      {uf:"RN",name:"DOMINGOS SANTO ANTONIO",lit:137718,lucro:188436},
+      {uf:"RN",name:"DOMINGOS PEDRO VELHO",lit:71626,lucro:119879},
+      {uf:"CE",name:"DOMINGOS BOQUEIRÃO II",lit:226881,lucro:142726},
+      {uf:"CE",name:"DOMINGOS BR 020",lit:101970,lucro:92440},
+      {uf:"CE",name:"DOMINGOS JAGUARIBARA II",lit:127316,lucro:83056}
+    ],
+    alerts:[
+      {ac:"#2563eb",icon:"📌",title:"Resultados 01–18/Novembro: 2.415.178 L · R$2.842.473,32",text:"Lucro Líquido do período: R$1.254.073,26, com as 19 unidades da aba Resultados todas positivas. Validação completa (fórmula linha a linha + todos os totais de coluna) sem nenhuma divergência material."},
+      {ac:"#059669",icon:"✅",title:"Litragem Cruzada com Relatório Analítico GrowthLive (01-18/11)",text:"Harisson enviou também o relatório Analítico completo do período (18 dias, todas as empresas). A litragem de cada uma das 19 unidades da aba Resultados bate com este relatório (diferença sub-1L em todos os casos) — forte confirmação cruzada dos dados do período."},
+      {ac:"#d97706",icon:"🧾",title:"ESP SANTO e PEDRO VELHO: Capital Alto Exige Atenção na Leitura",text:"No primeiro olhar, as células de Capital de ESP SANTO e PEDRO VELHO pareciam vazias ('-'); um recorte ampliado da imagem confirmou valores reais de R$1.325.240,00 (ESP SANTO) e R$385.182,58 (PEDRO VELHO) — corrigido antes da validação final. TOTAIS de Capital bate exatamente (R$7.125.249,02)."},
+      {ac:"#d97706",icon:"🏗️",title:"Nova Empresa 'POSTO MT' Aparece no Relatório Analítico",text:"O relatório Analítico (01-18/11) traz uma empresa até então não vista na rede: 'POSTO MT' (código 000107), com 90.413,78 L no período — volume na mesma ordem de grandeza das demais unidades. Não está na aba Resultados nem em nenhum histórico anterior. Não foi incorporada a nenhum total do dashboard; recomendamos confirmar com Harisson se é uma unidade nova da rede ou um registro indevido no GrowthLive."},
+      {ac:"#2563eb",icon:"ℹ️",title:"MM e BR 406: Sem Dado de Lucro Este Período (Mudança de Formato de PDF)",text:"O arquivo enviado para novembro é o relatório 'Analítico' do GrowthLive (por faixa de preço/dia), diferente do PDF diário resumido usado nos meses anteriores — ele traz litragem e valor de venda, mas não traz custo/margem. Por isso, MM (93.059 L) e BR 406 (174.027 L) ficam de fora do ranking de lucro neste update (eram 21 unidades em outubro, 19 agora). Litragem conferida; lucro bruto retomará quando um PDF no formato padrão (com custo) for recebido para essas duas."},
+      {ac:"#d97706",icon:"⚠️",title:"Margem/Litro do TOTAIS Segue Divergente",text:"A célula de Margem/Litro da linha TOTAIS mostra R$1,13, mas o cálculo direto (R$2.842.473,32 ÷ 2.415.178 L) dá R$1,18. Padrão recorrente sem correção, agora na 21ª atualização seguida considerando desde setembro."},
+      {ac:"#d97706",icon:"📊",title:"BOQUEIRÃO II Segue com a Margem Mais Apertada: R$0,63/L",text:"BR020 (R$0,91/L) e JAGUARIBARA II (R$0,65/L) seguem acima. ESP SANTO segue líder (R$2,25/L)."},
+      {ac:"#2563eb",icon:"🏛️",title:"PrimeGov: R$746.852,34 (18/Nov)",text:"JAGUARARI segue líder (R$220.939,16), seguido por ROMUALDO GALVAO (R$146.852,32)."}
+    ],
+    risks:[
+      {nivel:"ATENÇÃO",unidade:"REDE",produto:"MARGEM/LITRO DO TOTAIS (planilha original)",data:"01 a 18/11",custo:1.13,hist:1.18,obs:"A célula de Margem/Litro da linha TOTAIS mostra R$1,13, divergindo do cálculo direto Lucro Bruto ÷ Litragem (R$1,18). Mesma divergência recorrente desde setembro, agora na 21ª atualização."},
+      {nivel:"ATENÇÃO",unidade:"POSTO MT (não cadastrado)",produto:"NOVA EMPRESA NO RELATÓRIO ANALÍTICO",data:"01 a 18/11",custo:0,hist:0,obs:"Empresa 'POSTO MT' (código 000107) aparece pela primeira vez no relatório Analítico GrowthLive, com 90.413,78 L no período. Não consta na aba Resultados nem em nenhum mês anterior do dashboard. Não incorporada a nenhum total — recomenda-se confirmar com Harisson se é unidade nova da rede."},
+      {nivel:"INFORMATIVO",unidade:"MM / BR 406 COMERCIAL",produto:"LUCRO INDISPONÍVEL — MUDANÇA DE FORMATO DE PDF",data:"01 a 18/11",custo:0,hist:0,obs:"O PDF enviado para novembro é o relatório Analítico (sem coluna de custo/margem), diferente do PDF diário resumido usado antes. Litragem de MM (93.059 L) e BR 406 (174.027 L) conferida, mas sem lucro bruto disponível este período — ambas ficam fora do ranking até a chegada de um PDF no formato padrão para essas duas unidades."}
+    ],
+    riskSummary:{inflado:"~R$ 0",ocorrencias:"Resultados 01-18/11 validados sem divergência · Litragem cruzada com o relatório Analítico GrowthLive (19/19 unidades batem) · Nova empresa 'POSTO MT' aparece no relatório, não incorporada · MM e BR406 sem dado de lucro este período (mudança de formato de PDF) · Margem/Litro do TOTAIS segue divergente (21ª atualização)",principal:"REDE · Margem/Litro do TOTAIS diverge do cálculo direto (R$1,13 na planilha vs R$1,18 calculado)",principalSub:"Todas as linhas por unidade batem — recomendar revisão da fórmula da célula TOTAIS na planilha original",vol:"POSTO MT · Empresa não cadastrada aparece no relatório Analítico com 90.413,78 L",volSub:"Recomenda-se confirmar com Harisson se é uma unidade nova da rede ou registro indevido no GrowthLive",volBadge:"A confirmar",ajustado:"~R$ 2,84M (Resultados, 19 unidades, 01-18/11 parcial)",margemAdj:"Margem R$1,18/L calculada (01-18/11, mês em andamento)"},
+    prefeituras:{
+      periodo: "01 a 18/Nov/2026 (todos os grupos atualizados)",
+      rows:[
+        {unidade:"SUBAÉ",prefeitura:"CANGUARETAMA",faturado:1920201.87,pago:1301438.94,aberto:618762.93,afaturar:0,fiado:125299.35,totalFiado:744062.28},
+        {unidade:"COPACABANA",prefeitura:"LAGOA DE PEDRA",faturado:615590.07,pago:303883.31,aberto:311706.76,afaturar:0,fiado:0,totalFiado:311706.76},
+        {unidade:"EXTREMOZ",prefeitura:"EXTREMOZ",faturado:477873.48,pago:6755.46,aberto:471118.02,afaturar:0,fiado:239242.46,totalFiado:710360.48},
+        {unidade:"SANTO ANTONIO",prefeitura:"SÃO GONÇALO",faturado:740022.49,pago:683280.61,aberto:56741.88,afaturar:0,fiado:285258.65,totalFiado:342000.53},
+        {unidade:"PEDRO VELHO",prefeitura:"PEDRO VELHO",faturado:638242.95,pago:53813.72,aberto:584429.23,afaturar:0,fiado:289152.82,totalFiado:873582.05},
+        {unidade:"ESP SANTO",prefeitura:"ESP SANTO",faturado:963337.25,pago:553043.56,aberto:410293.69,afaturar:0,fiado:178338.61,totalFiado:588632.30},
+        {unidade:"ESP SANTO",prefeitura:"GOIANINHA",faturado:456348.93,pago:388554.22,aberto:67794.71,afaturar:0,fiado:248256.08,totalFiado:316050.79},
+        {unidade:"ESP SANTO",prefeitura:"VÁRZEA",faturado:259201.76,pago:203122.84,aberto:56078.92,afaturar:0,fiado:42747.74,totalFiado:98826.66},
+        {unidade:"ESP SANTO",prefeitura:"JUNDIÁ",faturado:350920.32,pago:171560.15,aberto:179360.17,afaturar:0,fiado:85021.23,totalFiado:264381.40}
+      ]
+    },
+    resultados:{
+      periodo: "01 a 18/novembro (19 unidades — mês em andamento)",
+      headers:["Unidade","Litragem","Lucro Bruto","Margem/L","Desp Fixas","Desp Variáveis","Juros Comb","Taxas/Tarifas","Sobra Planilha","Lucro Líquido","Fiado Marcos","Capital"],
+      rows:[
+        ["MAMANGUAPE",113505,127751.78,1.13,69509.37,16024.30,0,6270.35,0,35947.76,44851.90,0],
+        ["COPA",261148,269556.36,1.03,102536.30,22614.74,0,49190.58,0,95214.74,19789.49,111780.09],
+        ["MD",297770,238718.32,0.80,105467.01,34116.94,0,14410.77,0,84723.60,71721.58,0],
+        ["ESP SANTO",89548,201197.43,2.25,35261.02,1263.65,0,16921.62,0,147751.14,5000.00,1325240.00],
+        ["SUBAÉ",99965,147604.44,1.48,70966.44,6773.20,0,12451.12,0,57413.68,99762.10,754448.99],
+        ["REDINHA",87056,137349.30,1.58,49639.52,5802.64,0,22021.57,0,59885.57,34012.10,184005.06],
+        ["ROMUALDO",88741,168014.62,1.89,45653.15,4906.35,0,52641.46,0,64813.66,11300.00,106122.88],
+        ["SG",87606,106574.22,1.22,56612.91,2623.00,0,7778.22,0,39560.09,18579.27,309283.82],
+        ["JAGUARARI",119600,220715.43,1.85,64717.14,12097.00,0,71793.86,0,72107.43,22600.00,264941.80],
+        ["BAIXA DO MEIO",74581,152943.35,2.05,33663.71,4305.85,0,19944.29,0,95029.50,133641.10,610699.72],
+        ["BERNARDO VIEIRA",62124,65834.06,1.06,28539.71,4760.40,0,10255.09,0,22278.86,61132.06,127447.93],
+        ["EXTREMOZ",91378,128263.18,1.40,47626.99,682.37,0,6504.72,0,73449.10,0,652560.12],
+        ["GENIPABU",106542,111320.50,1.04,37502.93,2746.47,0,8409.96,0,62661.14,96041.76,336125.55],
+        ["RIACHUELO",170103,140093.03,0.82,71790.91,8493.83,0,20943.08,0,38865.21,167599.87,265295.79],
+        ["SANTO ANTONIO",137718,188435.91,1.37,47230.70,12321.52,0,14149.56,0,114734.13,26145.66,786115.50],
+        ["PEDRO VELHO",71626,119878.97,1.67,31386.26,2397.11,0,1522.80,0,84572.80,71076.31,385182.58],
+        ["BOQUEIRÃO II",226881,142726.32,0.63,71655.00,2498.60,0,6400.81,0,62171.91,12600.00,498556.54],
+        ["BR020",101970,92439.95,0.91,57531.71,11782.45,0,3685.84,0,19439.95,89829.85,92729.74],
+        ["JAGUARIBARA II",127316,83056.15,0.65,52618.25,3587.20,0,3397.71,0,23452.99,12600.00,314712.91],
+        ["TOTAIS",2415178,2842473.32,1.13,1079909.03,159797.62,0,348693.41,0,1254073.26,998283.05,7125249.02]
+      ]
+    },
+    primegov:{
+      periodo:"18/Nov/2026",
+      rows:[
+        {unidade:"BR406",valor:10345.30},
+        {unidade:"MM",valor:0},
+        {unidade:"ROMUALDO GALVAO",valor:146852.32},
+        {unidade:"JAGUARARI",valor:220939.16},
+        {unidade:"BERNARDO VIEIRA",valor:39877.73},
+        {unidade:"REDINHA",valor:48489.27},
+        {unidade:"GENIPABU",valor:1697.02},
+        {unidade:"SG",valor:17374.72},
+        {unidade:"EXTREMOZ",valor:6893.45},
+        {unidade:"SANTO ANTONIO",valor:32978.93},
+        {unidade:"COPACABANA",valor:110998.39},
+        {unidade:"BAIXA DO MEIO",valor:23534.76},
+        {unidade:"ESP SANTO",valor:27128.45},
+        {unidade:"SUBAÉ",valor:24408.48},
+        {unidade:"RIACHUELO",valor:35334.36}
+      ]
+    }
   }
 
 
@@ -1183,7 +1285,7 @@ if(sessionStorage.getItem("pd_auth")){document.getElementById("login-overlay").s
 // ══════════════════════════════════════════════
 //  STATE & INIT
 // ══════════════════════════════════════════════
-let cur="2026-10";
+let cur="2026-11";
 let cs={};
 
 function init(){
