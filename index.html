@@ -1152,9 +1152,28 @@ const MONTHS = {
     }
   },
     "2026-11": {
-    label:"Novembro 2026", unidades:19, diasMes:30,
-    status:"Resultados 01-18/11 (19 unidades, mês em andamento) · Litragem de MM, BR406 e nova empresa POSTO MT conferida via relatório analítico (sem dado de lucro) · Diário (gráfico) aguardando PDFs no formato padrão",
-    daily:[],
+    label:"Novembro 2026", unidades:21, diasMes:30,
+    status:"Resultados 01-18/11 (19 unidades, mês em andamento) · Ranking e Acomp. Diário atualizados com litragem do relatório Analítico GrowthLive (MM, BR406 inclusos — sem dado de lucro este período) · POSTO MT passará a entrar nos Resultados em próximas atualizações",
+    daily:[
+      {d:"01/11",dow:"Dom",lit:96507,lucro:null},
+      {d:"02/11",dow:"Seg",lit:122895,lucro:null},
+      {d:"03/11",dow:"Ter",lit:163974,lucro:null},
+      {d:"04/11",dow:"Qua",lit:151521,lucro:null},
+      {d:"05/11",dow:"Qui",lit:147372,lucro:null},
+      {d:"06/11",dow:"Sex",lit:169202,lucro:null},
+      {d:"07/11",dow:"Sáb",lit:143168,lucro:null},
+      {d:"08/11",dow:"Dom",lit:100500,lucro:null},
+      {d:"09/11",dow:"Seg",lit:159986,lucro:null},
+      {d:"10/11",dow:"Ter",lit:159070,lucro:null},
+      {d:"11/11",dow:"Qua",lit:161523,lucro:null},
+      {d:"12/11",dow:"Qui",lit:166194,lucro:null},
+      {d:"13/11",dow:"Sex",lit:178439,lucro:null},
+      {d:"14/11",dow:"Sáb",lit:148176,lucro:null},
+      {d:"15/11",dow:"Dom",lit:107300,lucro:null},
+      {d:"16/11",dow:"Seg",lit:168396,lucro:null},
+      {d:"17/11",dow:"Ter",lit:157303,lucro:null},
+      {d:"18/11",dow:"Qua",lit:180738,lucro:null}
+    ],
     units:[
       {uf:"PB",name:"DOMINGOS MAMANGUAPE",lit:113505,lucro:127752},
       {uf:"RN",name:"DOMINGOS COPACABANA",lit:261148,lucro:269556},
@@ -1174,24 +1193,24 @@ const MONTHS = {
       {uf:"RN",name:"DOMINGOS PEDRO VELHO",lit:71626,lucro:119879},
       {uf:"CE",name:"DOMINGOS BOQUEIRÃO II",lit:226881,lucro:142726},
       {uf:"CE",name:"DOMINGOS BR 020",lit:101970,lucro:92440},
-      {uf:"CE",name:"DOMINGOS JAGUARIBARA II",lit:127316,lucro:83056}
+      {uf:"CE",name:"DOMINGOS JAGUARIBARA II",lit:127316,lucro:83056},
+      {uf:"RN",name:"DOMINGOS MM",lit:93059,lucro:null},
+      {uf:"CE",name:"DOMINGOS BR 406 COMERCIAL",lit:174027,lucro:null}
     ],
     alerts:[
       {ac:"#2563eb",icon:"📌",title:"Resultados 01–18/Novembro: 2.415.178 L · R$2.842.473,32",text:"Lucro Líquido do período: R$1.254.073,26, com as 19 unidades da aba Resultados todas positivas. Validação completa (fórmula linha a linha + todos os totais de coluna) sem nenhuma divergência material."},
-      {ac:"#059669",icon:"✅",title:"Litragem Cruzada com Relatório Analítico GrowthLive (01-18/11)",text:"Harisson enviou também o relatório Analítico completo do período (18 dias, todas as empresas). A litragem de cada uma das 19 unidades da aba Resultados bate com este relatório (diferença sub-1L em todos os casos) — forte confirmação cruzada dos dados do período."},
+      {ac:"#059669",icon:"✅",title:"Ranking e Acompanhamento Diário Atualizados com o Relatório Analítico GrowthLive",text:"O relatório Analítico (01-18/11, 18 dias, todas as empresas) não traz custo/margem, mas foi usado para popular a litragem diária da rede (gráfico e tabela de Acomp. Diário) e para incluir MM (93.059 L) e BR 406 (174.027 L) de volta no ranking por litragem. Lucro/margem desses dois seguem indisponíveis até um PDF com dado de custo; litragem das 19 unidades da aba Resultados bateu exatamente com este relatório (diferença sub-1L em todos os casos)."},
       {ac:"#d97706",icon:"🧾",title:"ESP SANTO e PEDRO VELHO: Capital Alto Exige Atenção na Leitura",text:"No primeiro olhar, as células de Capital de ESP SANTO e PEDRO VELHO pareciam vazias ('-'); um recorte ampliado da imagem confirmou valores reais de R$1.325.240,00 (ESP SANTO) e R$385.182,58 (PEDRO VELHO) — corrigido antes da validação final. TOTAIS de Capital bate exatamente (R$7.125.249,02)."},
-      {ac:"#d97706",icon:"🏗️",title:"Nova Empresa 'POSTO MT' Aparece no Relatório Analítico",text:"O relatório Analítico (01-18/11) traz uma empresa até então não vista na rede: 'POSTO MT' (código 000107), com 90.413,78 L no período — volume na mesma ordem de grandeza das demais unidades. Não está na aba Resultados nem em nenhum histórico anterior. Não foi incorporada a nenhum total do dashboard; recomendamos confirmar com Harisson se é uma unidade nova da rede ou um registro indevido no GrowthLive."},
-      {ac:"#2563eb",icon:"ℹ️",title:"MM e BR 406: Sem Dado de Lucro Este Período (Mudança de Formato de PDF)",text:"O arquivo enviado para novembro é o relatório 'Analítico' do GrowthLive (por faixa de preço/dia), diferente do PDF diário resumido usado nos meses anteriores — ele traz litragem e valor de venda, mas não traz custo/margem. Por isso, MM (93.059 L) e BR 406 (174.027 L) ficam de fora do ranking de lucro neste update (eram 21 unidades em outubro, 19 agora). Litragem conferida; lucro bruto retomará quando um PDF no formato padrão (com custo) for recebido para essas duas."},
+      {ac:"#2563eb",icon:"🏗️",title:"Nova Unidade 'POSTO MT' a Caminho da Aba Resultados",text:"O relatório Analítico (01-18/11) já traz 'POSTO MT' (código 000107, 90.413,78 L no período) — segundo Harisson, essa unidade passará a aparecer na aba Resultados em próximas atualizações. Ainda não incluída nos totais/ranking deste update; entra assim que estiver na planilha de Resultados."},
       {ac:"#d97706",icon:"⚠️",title:"Margem/Litro do TOTAIS Segue Divergente",text:"A célula de Margem/Litro da linha TOTAIS mostra R$1,13, mas o cálculo direto (R$2.842.473,32 ÷ 2.415.178 L) dá R$1,18. Padrão recorrente sem correção, agora na 21ª atualização seguida considerando desde setembro."},
       {ac:"#d97706",icon:"📊",title:"BOQUEIRÃO II Segue com a Margem Mais Apertada: R$0,63/L",text:"BR020 (R$0,91/L) e JAGUARIBARA II (R$0,65/L) seguem acima. ESP SANTO segue líder (R$2,25/L)."},
       {ac:"#2563eb",icon:"🏛️",title:"PrimeGov: R$746.852,34 (18/Nov)",text:"JAGUARARI segue líder (R$220.939,16), seguido por ROMUALDO GALVAO (R$146.852,32)."}
     ],
     risks:[
       {nivel:"ATENÇÃO",unidade:"REDE",produto:"MARGEM/LITRO DO TOTAIS (planilha original)",data:"01 a 18/11",custo:1.13,hist:1.18,obs:"A célula de Margem/Litro da linha TOTAIS mostra R$1,13, divergindo do cálculo direto Lucro Bruto ÷ Litragem (R$1,18). Mesma divergência recorrente desde setembro, agora na 21ª atualização."},
-      {nivel:"ATENÇÃO",unidade:"POSTO MT (não cadastrado)",produto:"NOVA EMPRESA NO RELATÓRIO ANALÍTICO",data:"01 a 18/11",custo:0,hist:0,obs:"Empresa 'POSTO MT' (código 000107) aparece pela primeira vez no relatório Analítico GrowthLive, com 90.413,78 L no período. Não consta na aba Resultados nem em nenhum mês anterior do dashboard. Não incorporada a nenhum total — recomenda-se confirmar com Harisson se é unidade nova da rede."},
-      {nivel:"INFORMATIVO",unidade:"MM / BR 406 COMERCIAL",produto:"LUCRO INDISPONÍVEL — MUDANÇA DE FORMATO DE PDF",data:"01 a 18/11",custo:0,hist:0,obs:"O PDF enviado para novembro é o relatório Analítico (sem coluna de custo/margem), diferente do PDF diário resumido usado antes. Litragem de MM (93.059 L) e BR 406 (174.027 L) conferida, mas sem lucro bruto disponível este período — ambas ficam fora do ranking até a chegada de um PDF no formato padrão para essas duas unidades."}
+      {nivel:"INFORMATIVO",unidade:"MM / BR 406 COMERCIAL",produto:"LUCRO INDISPONÍVEL — MUDANÇA DE FORMATO DE PDF",data:"01 a 18/11",custo:0,hist:0,obs:"O relatório Analítico do GrowthLive usado em novembro não traz custo/margem. Litragem de MM (93.059 L) e BR 406 (174.027 L) já está no ranking e no Acomp. Diário; lucro bruto retomará quando um PDF com dado de custo for recebido para essas duas unidades."}
     ],
-    riskSummary:{inflado:"~R$ 0",ocorrencias:"Resultados 01-18/11 validados sem divergência · Litragem cruzada com o relatório Analítico GrowthLive (19/19 unidades batem) · Nova empresa 'POSTO MT' aparece no relatório, não incorporada · MM e BR406 sem dado de lucro este período (mudança de formato de PDF) · Margem/Litro do TOTAIS segue divergente (21ª atualização)",principal:"REDE · Margem/Litro do TOTAIS diverge do cálculo direto (R$1,13 na planilha vs R$1,18 calculado)",principalSub:"Todas as linhas por unidade batem — recomendar revisão da fórmula da célula TOTAIS na planilha original",vol:"POSTO MT · Empresa não cadastrada aparece no relatório Analítico com 90.413,78 L",volSub:"Recomenda-se confirmar com Harisson se é uma unidade nova da rede ou registro indevido no GrowthLive",volBadge:"A confirmar",ajustado:"~R$ 2,84M (Resultados, 19 unidades, 01-18/11 parcial)",margemAdj:"Margem R$1,18/L calculada (01-18/11, mês em andamento)"},
+    riskSummary:{inflado:"~R$ 0",ocorrencias:"Resultados 01-18/11 validados sem divergência · Litragem cruzada com o relatório Analítico GrowthLive (19/19 unidades batem) · Ranking e Acomp. Diário atualizados com litragem de MM e BR406 (sem lucro este período) · POSTO MT aparece no relatório e passará a entrar nos Resultados em breve · Margem/Litro do TOTAIS segue divergente (21ª atualização)",principal:"REDE · Margem/Litro do TOTAIS diverge do cálculo direto (R$1,13 na planilha vs R$1,18 calculado)",principalSub:"Todas as linhas por unidade batem — recomendar revisão da fórmula da célula TOTAIS na planilha original",vol:"MM e BR 406 · Litragem incluída no ranking/diário, lucro bruto pendente de PDF com custo",volSub:"POSTO MT (90.413,78 L) já aparece no relatório Analítico e entrará na aba Resultados em próximas atualizações",volBadge:"Em andamento",ajustado:"~R$ 2,84M (Resultados, 19 unidades, 01-18/11 parcial)",margemAdj:"Margem R$1,18/L calculada (01-18/11, mês em andamento)"},
     prefeituras:{
       periodo: "01 a 18/Nov/2026 (todos os grupos atualizados)",
       rows:[
@@ -1332,40 +1351,57 @@ function loadMonth(k){
 
   // KPIs
   const daily=m.daily;
+  if(!daily.length){
+    ["kpi-lit","kpi-lit-sub","kpi-lit-badge","kpi-lucro","kpi-lucro-sub","kpi-lucro-badge",
+     "kpi-margem","kpi-margem-sub","kpi-margem-badge","kpi-proj","kpi-proj-sub","kpi-proj-badge"]
+      .forEach(id=>{const el=document.getElementById(id); if(el)el.textContent="—";});
+    document.getElementById("chart-note").textContent="Sem dados diários registrados neste período.";
+  } else {
+  const dadosLucro=daily.filter(d=>typeof d.lucro==="number");
+  const temLucro=dadosLucro.length>0;
   const tl=daily.reduce((s,d)=>s+d.lit,0);
-  const tlu=daily.reduce((s,d)=>s+d.lucro,0);
+  const tlu=dadosLucro.reduce((s,d)=>s+d.lucro,0);
   const n=daily.length, dias=m.diasMes;
-  const mg=(tlu/tl*100).toFixed(2);
+  const mg=temLucro?(tlu/tl*100).toFixed(2):null;
   const mediaLit=tl/n;
   const rest=dias-n;
   const projLit=tl+mediaLit*rest;
-  const projLuc=tlu+(tlu/n)*rest;
+  const projLuc=temLucro?tlu+(tlu/dadosLucro.length)*rest:null;
 
   document.getElementById("kpi-lit").textContent=(tl/1e6).toFixed(2)+"M L";
   document.getElementById("kpi-lit-sub").textContent=tl.toLocaleString("pt-BR")+" litros · "+n+" dias";
   document.getElementById("kpi-lit-badge").textContent="≈ "+Math.round(mediaLit).toLocaleString("pt-BR")+" L/dia";
-  document.getElementById("kpi-lucro").textContent="R$ "+(tlu/1e6).toFixed(2)+"M";
-  document.getElementById("kpi-lucro-sub").textContent="R$ "+tlu.toLocaleString("pt-BR");
-  document.getElementById("kpi-lucro-badge").textContent="≈ R$ "+Math.round(tlu/n).toLocaleString("pt-BR")+"/dia";
-  document.getElementById("kpi-margem").textContent=mg+"%";
-  document.getElementById("kpi-margem-sub").textContent="R$/L médio: R$ "+(tlu/tl).toFixed(4);
+  if(temLucro){
+    document.getElementById("kpi-lucro").textContent="R$ "+(tlu/1e6).toFixed(2)+"M";
+    document.getElementById("kpi-lucro-sub").textContent="R$ "+tlu.toLocaleString("pt-BR");
+    document.getElementById("kpi-lucro-badge").textContent="≈ R$ "+Math.round(tlu/dadosLucro.length).toLocaleString("pt-BR")+"/dia";
+    document.getElementById("kpi-margem").textContent=mg+"%";
+    document.getElementById("kpi-margem-sub").textContent="R$/L médio: R$ "+(tlu/tl).toFixed(4);
+  } else {
+    document.getElementById("kpi-lucro").textContent="—";
+    document.getElementById("kpi-lucro-sub").textContent="Sem dado de lucro no período (PDF sem custo/margem)";
+    document.getElementById("kpi-lucro-badge").textContent="indisponível";
+    document.getElementById("kpi-margem").textContent="—";
+    document.getElementById("kpi-margem-sub").textContent="Sem dado de margem no período";
+  }
   document.getElementById("kpi-margem-badge").textContent=n+" de "+dias+" dias";
 
   // Projeção
   if(n>=dias){
     document.getElementById("kpi-proj").textContent=(tl/1e6).toFixed(2)+"M L";
     document.getElementById("kpi-proj-sub").textContent="Mês fechado — "+dias+" dias";
-    document.getElementById("kpi-proj-badge").textContent="R$ "+(tlu/1e6).toFixed(2)+"M lucro";
+    document.getElementById("kpi-proj-badge").textContent=temLucro?("R$ "+(tlu/1e6).toFixed(2)+"M lucro"):"lucro indisponível";
   } else {
     document.getElementById("kpi-proj").textContent="~"+(projLit/1e6).toFixed(2)+"M L";
     document.getElementById("kpi-proj-sub").textContent=rest+" dias restantes ("+n+" registrados)";
-    document.getElementById("kpi-proj-badge").textContent="≈ R$ "+(projLuc/1e6).toFixed(2)+"M lucro";
+    document.getElementById("kpi-proj-badge").textContent=temLucro?("≈ R$ "+(projLuc/1e6).toFixed(2)+"M lucro"):"lucro indisponível";
   }
 
   // Chart note
   const pk=daily.reduce((a,b)=>b.lit>a.lit?b:a,daily[0]);
   const mn=daily.reduce((a,b)=>b.lit<a.lit?b:a,daily[0]);
   document.getElementById("chart-note").innerHTML=`Pico: <strong>${pk.d} ${pk.dow} · ${pk.lit.toLocaleString("pt-BR")} L</strong> | Menor: <strong>${mn.d} ${mn.dow} · ${mn.lit.toLocaleString("pt-BR")} L</strong>`;
+  }
 
   buildRanking(m.units);
   buildDailyTable(m.daily, m.diasMes);
@@ -1387,8 +1423,9 @@ function buildRanking(units){
   t.innerHTML=`<thead><tr><th>#</th><th>Unidade</th><th>UF</th><th>Litragem</th><th>Lucro</th><th>Margem</th></tr></thead>`;
   const tb=document.createElement("tbody");
   s.forEach((u,i)=>{
-    const m=(u.lucro/u.lit)*100;
-    const mc=m>=95?"m-high":m>=75?"m-mid":"m-low";
+    const temL=typeof u.lucro==="number";
+    const m=temL?(u.lucro/u.lit)*100:null;
+    const mc=temL?(m>=95?"m-high":m>=75?"m-mid":"m-low"):"";
     const bw=Math.round((u.lit/mxL)*70);
     tb.innerHTML+=`<tr>
       <td style="color:var(--muted);font-weight:600">${i+1}</td>
@@ -1398,8 +1435,8 @@ function buildRanking(units){
         <span style="font-family:var(--mono);font-size:11px">${u.lit.toLocaleString("pt-BR")}</span>
         <span class="bar-bg"><span class="bar-fill" style="width:${bw}px"></span></span>
       </div></td>
-      <td style="font-family:var(--mono);font-size:11px">R$ ${u.lucro.toLocaleString("pt-BR")}</td>
-      <td class="${mc}">${m.toFixed(1)}%</td>
+      <td style="font-family:var(--mono);font-size:11px">${temL?("R$ "+u.lucro.toLocaleString("pt-BR")):"—"}</td>
+      <td class="${mc}">${temL?m.toFixed(1)+"%":"—"}</td>
     </tr>`;
   });
   t.appendChild(tb);
@@ -1413,7 +1450,8 @@ function buildDailyTable(daily, diasMes){
   if(!daily.length){t.innerHTML="<tr><td colspan='8' style='text-align:center;padding:24px;color:var(--muted)'>Nenhum dado registrado.</td></tr>";return;}
   const mxLit=Math.max(...daily.map(d=>d.lit));
   const totalLit=daily.reduce((s,d)=>s+d.lit,0);
-  const totalLucro=daily.reduce((s,d)=>s+d.lucro,0);
+  const temLucroMes=daily.some(d=>typeof d.lucro==="number");
+  const totalLucro=daily.reduce((s,d)=>s+(typeof d.lucro==="number"?d.lucro:0),0);
   const n=daily.length;
   const mediaLit=totalLit/n;
 
@@ -1427,9 +1465,10 @@ function buildDailyTable(daily, diasMes){
 
   let acumLit=0, acumLucro=0;
   daily.forEach((d,i)=>{
-    acumLit+=d.lit; acumLucro+=d.lucro;
-    const mg=(d.lucro/d.lit*100).toFixed(1);
-    const mCls=parseFloat(mg)>=95?"m-high":parseFloat(mg)>=75?"m-mid":"m-low";
+    const temL=temLucroMes&&typeof d.lucro==="number";
+    acumLit+=d.lit; if(temL)acumLucro+=d.lucro;
+    const mg=temL?(d.lucro/d.lit*100).toFixed(1):null;
+    const mCls=temL?(parseFloat(mg)>=95?"m-high":parseFloat(mg)>=75?"m-mid":"m-low"):"";
     const diff=d.lit-mediaLit;
     const diffPct=(diff/mediaLit*100).toFixed(1);
     const diffStr=(diff>=0?"↑":"↓")+" "+Math.abs(diffPct)+"%";
@@ -1441,10 +1480,10 @@ function buildDailyTable(daily, diasMes){
       <td style="color:${isDom?"var(--orange)":"var(--muted)"};font-family:var(--sans)">${d.dow}</td>
       <td><span>${d.lit.toLocaleString("pt-BR")}</span><span class="bar-day"><span class="bar-day-fill" style="width:${barW}px"></span></span></td>
       <td class="${diffCls}" style="font-size:11px">${diffStr}</td>
-      <td>R$ ${d.lucro.toLocaleString("pt-BR")}</td>
-      <td class="${mCls}">${mg}%</td>
+      <td>${temL?("R$ "+d.lucro.toLocaleString("pt-BR")):"—"}</td>
+      <td class="${mCls}">${temL?mg+"%":"—"}</td>
       <td>${acumLit.toLocaleString("pt-BR")}</td>
-      <td>R$ ${acumLucro.toLocaleString("pt-BR")}</td>
+      <td>${temLucroMes?("R$ "+acumLucro.toLocaleString("pt-BR")):"—"}</td>
     </tr>`;
   });
 
@@ -1453,8 +1492,8 @@ function buildDailyTable(daily, diasMes){
     <td colspan="2">TOTAL / MÉDIA</td>
     <td>${totalLit.toLocaleString("pt-BR")}</td>
     <td style="color:var(--muted);font-size:11px">média: ${Math.round(mediaLit).toLocaleString("pt-BR")}</td>
-    <td>R$ ${totalLucro.toLocaleString("pt-BR")}</td>
-    <td class="${(totalLucro/totalLit*100)>=95?"m-high":(totalLucro/totalLit*100)>=75?"m-mid":"m-low"}">${(totalLucro/totalLit*100).toFixed(1)}%</td>
+    <td>${temLucroMes?("R$ "+totalLucro.toLocaleString("pt-BR")):"—"}</td>
+    <td class="${temLucroMes?((totalLucro/totalLit*100)>=95?"m-high":(totalLucro/totalLit*100)>=75?"m-mid":"m-low"):""}">${temLucroMes?(totalLucro/totalLit*100).toFixed(1)+"%":"—"}</td>
     <td colspan="2" style="color:var(--muted);font-size:11px">${n} de ${diasMes} dias registrados</td>
   </tr>`;
   t.appendChild(tb);
@@ -1533,18 +1572,20 @@ function buildChart(daily){
   newC.style.height=H+"px"; ctx.scale(devicePixelRatio,devicePixelRatio);
   const pL=52,pR=16,pT=16,pB=52,n=daily.length;
   const cW=W-pL-pR,cH=H-pT-pB;
-  const mxL=Math.max(...daily.map(d=>d.lit))*1.18;
-  const mxLu=Math.max(...daily.map(d=>d.lucro))*1.18;
+  const mxL=(Math.max(...daily.map(d=>d.lit))||1)*1.18;
+  const dadosLucro=daily.filter(d=>typeof d.lucro==="number");
+  const temLucro=dadosLucro.length>0;
+  const mxLu=temLucro?Math.max(...dadosLucro.map(d=>d.lucro))*1.18:1;
   const step=n>1?cW/(n-1):cW;
   const bW=Math.max(n>1?step*0.6:60,5);
-  cs={canvas:newC,ctx,pL,pR,pT,pB,cW,cH,mxL,mxLu,step,bW,n,daily};
+  cs={canvas:newC,ctx,pL,pR,pT,pB,cW,cH,mxL,mxLu,step,bW,n,daily,temLucro};
   drawChart(-1);
   newC.parentElement.addEventListener("mousemove",onHover);
   newC.parentElement.addEventListener("mouseleave",()=>{document.getElementById("chartTooltip").style.display="none";drawChart(-1);});
 }
 
 function drawChart(hl){
-  const {ctx,pL,pT,pB,cW,cH,mxL,mxLu,step,bW,n,daily}=cs;
+  const {ctx,pL,pT,pB,cW,cH,mxL,mxLu,step,bW,n,daily,temLucro}=cs;
   ctx.clearRect(0,0,cs.canvas.width,cs.canvas.height);
   [0,.25,.5,.75,1].forEach(t=>{
     const y=pT+cH*(1-t);
@@ -1570,26 +1611,38 @@ function drawChart(hl){
       ctx.fillText(d.dow,x,pT+cH+26);
     }
   });
-  if(n>1){
-    ctx.beginPath();ctx.strokeStyle="#059669";ctx.lineWidth=2;
-    daily.forEach((d,i)=>{const x=pL+i*step;const y=pT+cH-(d.lucro/mxLu)*cH;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});
-    ctx.stroke();
-  }
-  daily.forEach((d,i)=>{
-    const x=n>1?pL+i*step:pL+cW/2;
-    const y=pT+cH-(d.lucro/mxLu)*cH;
-    const ev=Math.max(1,Math.floor(n/8));
-    if(i%ev===0||i===n-1||i===hl){
-      ctx.beginPath();ctx.arc(x,y,i===hl?5:3.5,0,Math.PI*2);ctx.fillStyle="#059669";ctx.fill();
+  if(temLucro){
+    if(n>1){
+      ctx.beginPath();ctx.strokeStyle="#059669";ctx.lineWidth=2;
+      let started=false;
+      daily.forEach((d,i)=>{
+        if(typeof d.lucro!=="number")return;
+        const x=pL+i*step;const y=pT+cH-(d.lucro/mxLu)*cH;
+        started?ctx.lineTo(x,y):ctx.moveTo(x,y); started=true;
+      });
+      ctx.stroke();
     }
-  });
+    daily.forEach((d,i)=>{
+      if(typeof d.lucro!=="number")return;
+      const x=n>1?pL+i*step:pL+cW/2;
+      const y=pT+cH-(d.lucro/mxLu)*cH;
+      const ev=Math.max(1,Math.floor(n/8));
+      if(i%ev===0||i===n-1||i===hl){
+        ctx.beginPath();ctx.arc(x,y,i===hl?5:3.5,0,Math.PI*2);ctx.fillStyle="#059669";ctx.fill();
+      }
+    });
+  }
   ctx.save();ctx.translate(12,pT+cH/2);ctx.rotate(-Math.PI/2);
   ctx.fillStyle="#9ca3af";ctx.font="8px Inter";ctx.textAlign="center";ctx.fillText("Litros (K)",0,0);ctx.restore();
   const ly=pT+cH+38;
   ctx.fillStyle="rgba(26,58,143,.35)";ctx.fillRect(pL,ly-7,14,9);
   ctx.fillStyle="#374151";ctx.font="9px Inter";ctx.textAlign="left";ctx.fillText("Litragem",pL+18,ly);
   ctx.fillStyle="rgba(217,119,6,.4)";ctx.fillRect(pL+82,ly-7,14,9);ctx.fillText("Domingo",pL+100,ly);
-  ctx.fillStyle="#059669";ctx.beginPath();ctx.arc(pL+166,ly-3,4,0,Math.PI*2);ctx.fill();ctx.fillText("Lucro Bruto",pL+174,ly);
+  if(temLucro){
+    ctx.fillStyle="#059669";ctx.beginPath();ctx.arc(pL+166,ly-3,4,0,Math.PI*2);ctx.fill();ctx.fillText("Lucro Bruto",pL+174,ly);
+  } else {
+    ctx.fillStyle="#9ca3af";ctx.font="9px Inter";ctx.fillText("Lucro Bruto: indisponível este período",pL+166,ly);
+  }
 }
 
 function onHover(e){
@@ -1601,10 +1654,11 @@ function onHover(e){
   if(best<0||md>cs.step*0.8){document.getElementById("chartTooltip").style.display="none";drawChart(-1);return;}
   drawChart(best);
   const d=cs.daily[best];
+  const temL=typeof d.lucro==="number";
   document.getElementById("tt-date").textContent=d.d+" ("+d.dow+")";
   document.getElementById("tt-lit").textContent="Litragem: "+d.lit.toLocaleString("pt-BR")+" L";
-  document.getElementById("tt-lucro").textContent="Lucro: R$ "+d.lucro.toLocaleString("pt-BR");
-  document.getElementById("tt-margem").textContent="Margem: "+(d.lucro/d.lit*100).toFixed(1)+"%";
+  document.getElementById("tt-lucro").textContent=temL?("Lucro: R$ "+d.lucro.toLocaleString("pt-BR")):"Lucro: indisponível";
+  document.getElementById("tt-margem").textContent=temL?("Margem: "+(d.lucro/d.lit*100).toFixed(1)+"%"):"Margem: indisponível";
   const wr=cs.canvas.parentElement.getBoundingClientRect();
   let tx=e.clientX-wr.left+16, ty=e.clientY-wr.top-60;
   if(tx+210>wr.width)tx=e.clientX-wr.left-220;
